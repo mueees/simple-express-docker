@@ -1,11 +1,11 @@
-Build image:
+# build the app container
 docker build -t mueees/simple-express-docker .
 
-Run image:
-docker run -ti --net test -p 7777:7777 -d mueees/simple-express-docker bash
+# create the network
+docker network create expressapp
 
-Print app output:
-docker logs <container id>
+# start the database (mongodb) container
+docker run -d --net expressapp -p 27017:27017 -p 27018:27018 --name database mongo
 
-Enter the container
-$ docker exec -it <container id> /bin/bash
+# start the app container
+docker run -d --net expressapp -p 7777:7777 --name simple-express-docker mueees/simple-express-docker
