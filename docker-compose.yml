@@ -1,0 +1,13 @@
+version: "2"
+services:
+  database:
+    image: mongo
+    ports:
+      - "27017:27017"
+  simple-express-docker:
+    image: mueees/simple-express-docker
+    command: npm start
+    ports:
+      - "7777:7777"
+    volumes:
+      - .:/code

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-// hardcoded database host based on custom docker network
-const DATABASE_HOST = '172.18.0.2';
+// dynamic host which is based on docker-compose configuration
+const DATABASE_HOST = 'database';
 
 // use native Promise
 mongoose.Promise = global.Promise;
