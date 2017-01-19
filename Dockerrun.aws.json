@@ -1,0 +1,13 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "mueees/simple-express-docker",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "7777"
+    }
+  ],
+  "Logging": "/var/log/nginx"
+}
