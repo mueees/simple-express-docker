@@ -5,13 +5,17 @@ const express = require('express');
 // Constants
 const PORT = 7777;
 
+var visitCounts = 0;
+
 // Database
 // require('./database');
 
 // App
 const app = express();
 app.get('/', function (req, res) {
-    res.send('Hello world\n');
+    visitCounts++;
+
+    res.send('Visit counts: ' + visitCounts + '\n');
 });
 
 app.listen(PORT);
