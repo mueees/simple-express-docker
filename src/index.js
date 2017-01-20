@@ -15,7 +15,7 @@ const app = express();
 app.get('/', function (req, res) {
     visitCounts++;
 
-    res.send('Visit counts: ' + visitCounts + '\n');
+    res.send('Visit counts : ' + visitCounts + '\n');
 });
 
 app.listen(PORT);
