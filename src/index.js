@@ -6,7 +6,7 @@ const express = require('express');
 const PORT = 7777;
 
 // Database
-require('./database');
+// require('./database');
 
 // App
 const app = express();

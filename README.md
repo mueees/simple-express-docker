@@ -1,6 +1,13 @@
 # build the app container
 docker build -t mueees/simple-express-docker .
 
+# run only app without db
+docker run -d -p 7777:7777 --name simple-express-docker mueees/simple-express-docker
+
+----------------------
+
+#Run containers using custom network
+
 # create the network
 docker network create expressapp
 

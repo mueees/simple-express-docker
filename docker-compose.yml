@@ -10,4 +10,4 @@ services:
     ports:
       - "7777:7777"
     volumes:
-      - .:/code
+      - .:/usr/src/app
